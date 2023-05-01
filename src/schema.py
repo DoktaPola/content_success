@@ -11,3 +11,5 @@ POSTER_URL = 'poster_url'
 POSTER_URL_PREVIEW = 'poster_url_preview'
 
 TARGET_RATING = 'rating'
+TARGET_WORLD = 'WORLD'
+

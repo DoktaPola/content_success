@@ -10,7 +10,7 @@ from catboost import Pool
 
 import src.schema as S
 from src.core import BaseTransformer
-from src.evaluate.metrics import calc_metrics
+from src.evaluate.metrics import calc_metrics, inverse_transform
 from src.pipeline.utils import standardize_df, target_distr_linear
 from src.train_test_split import split_df
 
@@ -203,7 +203,10 @@ class Pipeline(ABC):
 
         return preds
 
-    def get_scores(self, y_true, y_pred):
+    def get_scores(self, y_true, y_pred, transform_mode=False):
+        if transform_mode:
+            calc_metrics(inverse_transform(y_true), inverse_transform(y_pred))
+            return
         calc_metrics(y_true, y_pred)
 
     def prepare_data(self, df: pd.DataFrame):

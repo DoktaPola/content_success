@@ -32,3 +32,7 @@ def calc_metrics(true, pred):
 
     print("MSE:   {}\nRMSE:  {}\nR2:    {}\nMAE:   {}\nMedAE: {}".format(mse1, rmse1, R21, mae1, medae1))
     print('-'*30)
+
+
+def inverse_transform(feature):
+    return np.expm1(feature)
