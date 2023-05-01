@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://i.imgur.com/SPYT1zV.png" width="154">
-  <h1 align="center">Pre-release content success prediction</h1>
+  <h1 align="center">Content success prediction (before its release)</h1>
   <p align="center">Pipeline for experiments that implement <b>data preprocessing, augmenting, model training, and model scoring</b> of data
   received from <b>Kinopoisk</b>.
 Implemented in Python.</p>
