@@ -38,7 +38,7 @@ def split_df(df: pd.DataFrame,
 
     X_test, y_test = test.drop(target_name, axis=1), test[target_name]
     X, y = train.drop(target_name, axis=1), train[target_name]
-    if target_name == 'WORLD':
+    if (target_name == 'WORLD') or (target_name == 'target'):
         y = y.apply(lambda x: np.log1p(x))
         y_test = y_test.apply(lambda x: np.log1p(x))
     X_train, X_val, y_train, y_val = train_test_split(X, y,

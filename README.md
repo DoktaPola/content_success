@@ -60,6 +60,8 @@ Implemented in Python.</p>
     - **notebooks/** --> many different experiments with preprocessings and modeling
 * **ML_experiments/**
     * **demo_ratings.ipynb** --> demo of usage regression pipeline for *ratings* target
+    * **demo_world.ipynb** --> demo of usage regression pipeline for *budget* target
+    * **demo_views.ipynb** --> demo of usage regression pipeline for *views* target
     * **ПЕРЕПИСАТЬ** --> demo of usage
     * **ПЕРЕПИСАТЬ** --> notebook contains almost the entire pipeline code for generating jokes, but without dividing into modules(classes) and preprocessing. It was used in Google Colab to train the model on the GPU.
     * **notebooks/** --> many different experiments with preprocessings and modeling
@@ -78,7 +80,7 @@ __Important:__ depending on your system, make sure to use `pip3` and `python3` i
 This repository contains 1 pipeline for experiments:
 - content success regressor
 
-To run one of pipelines, see the usage **[ratings ml demo](https://github.com/DoktaPola/content_success/blob/main/ML_experiments/demo_ratings.ipynb)**, **[budget ml demo](ADD)**.
+To run one of pipelines, see the usage **[ratings ml demo](https://github.com/DoktaPola/content_success/blob/main/ML_experiments/demo_ratings.ipynb)**, **[budget ml demo](https://github.com/DoktaPola/content_success/blob/main/ML_experiments/demo_world.ipynb)**, **[views ml demo](https://github.com/DoktaPola/content_success/blob/main/ML_experiments/demo_views.ipynb)**.
 
 * First of all, all needed for pipeline instances have to be called and passed to the appropriate pipeline.
 * Then, prepare_data() has to be called, in order to process the dataset before training.

@@ -76,7 +76,7 @@ class SimplePreprocessor(BaseTransformer):
         return df
 
     def _transform_target(self, X: pd.DataFrame):
-        X.dropna(subset=[S.TARGET_WORLD], inplace=True)
+        X.dropna(subset=[self.target_name], inplace=True)
         return X
 
     def _fit_df(
@@ -90,7 +90,7 @@ class SimplePreprocessor(BaseTransformer):
             self,
             X: pd.DataFrame
     ) -> pd.DataFrame:
-        if self.target_name == 'WORLD':
+        if self.target_name == 'WORLD' or self.target_name == 'USA':
             X = self._transform_target(X)
         X = self._filter_year(X)
         X = self._add_top_n_features(X)
